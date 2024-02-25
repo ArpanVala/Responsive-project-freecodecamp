@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #707070;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+header {
+  height: 13em;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+/* for centering container inside header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  background-color: #143774;
+  color: white;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0px auto;
+}
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1.7em;
+}
+/* 
+===========
+TYPOGRAPHY
+===========
+*/
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  font-family: lora, serif;
+  color: #143774;
+  margin-top: 0px;
+}
+title h1 {
+  font-size: 1.6rem;
+}
+a {
+  color: #1792d2;
+  text-decoration: none;
+  font-weight: bolder;
+}
+a:hover,
+a:focus {
+  color: #143774;
+}
+.title p {
+  color: #1792d2;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  word-spacing: 0.25em;
+}
+strong {
+  font-weight: 700;
+}
+.article-title,
+.widget-recent-post-title {
+  font-size: 1.5em;
+}
+.article-body {
+  text-align: justify;
+}
+
+.widget-title {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+}
+/* 
+====
+End
+==== 
+*/
+.title {
+  margin-bottom: 0.5em;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+nav li {
+  list-style: none;
+  flex-direction: column;
+  margin: 0.2em 0;
+}
+nav a {
+  color: #717171;
+  font-size: 1rem;
+}
+nav a:hover {
+  color: #1792d2;
+  border-bottom: 4px solid #1792d2;
+  transition: border-bottom 0.2s 0.1s ease;
+}
+.active {
+  border-bottom: 4px solid #717171;
+}
+.active:hover {
+  cursor: default;
+  color: #717171;
+  border-bottom: 4px solid #717171;
+}
+.article-read-more:hover {
+  text-decoration: underline;
+}
+.article-image {
+  width: 100%;
+  min-height: 150px;
+  object-fit: cover;
+}
+.about-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+.article-info {
+  margin: 0.4em 0px;
+}
+.featured-article {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #707070;
+}
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.article-recent-main {
+  order: 2; /*for changing visual order */
+}
+.article-recent-secondary {
+  order: 1; /*for changing visual order */
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column-reverse;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 1em;
+  padding-bottom: 0.3em;
+}
+
+.widget-recent-post:last-child {
+  margin: 0;
+  border: 0;
+}
+
+.widget-body {
+  margin: 0.4em 0;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (min-width: 900px) {
+  .first {
+    margin-top: -10em;
+  }
+}
+@media (min-width: 675px) {
+  header {
+    height: auto;
+  }
+  .container-flex {
+    flex-direction: row;
+  }
+  main {
+    width: 70%;
+  }
+  aside {
+    width: 25%;
+    align-self: flex-start;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav li {
+    margin-left: 1em;
+  }
+  .article-info {
+    font-size: 0.8em;
+  }
+  .article-recent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .article-recent-main {
+    width: 68%;
+  }
+  .article-recent-secondary {
+    width: 30%;
+  }
+  .featured-article {
+    display: flex;
+    flex-direction: column;
+  }
+  .featured-article .article-title {
+    order: 1;
+    margin-bottom: 0.4em;
+  }
+  .featured-article .article-image {
+    order: 0;
+  }
+  .featured-article .article-body {
+    order: 3;
+  }
+  .featured-article a {
+    order: 4;
+  }
+  .sidebar-widget {
+    border: 1em solid #ebebeb;
+    margin-bottom: 2em;
+    padding: 1em;
+  }
+  .widget-recent-post-title,
+  .widget-title {
+    font-size: 1rem;
+  }
+}
